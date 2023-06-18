@@ -1,0 +1,45 @@
+# Section ######################################################################
+snippet sec "Section" b
+\sec{${1:Section Title}}
+\label{sec:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\l$1$2$3)/g}}}
+
+$0
+endsnippet
+
+
+# Section Reference ############################################################ 
+snippet secref "Section Ref" i
+Section~\ref{sec:$1}$0
+endsnippet
+
+
+# Subsection ###################################################################                     
+snippet subsec "Subsection" b
+\subsec{${1:Subsection Title}}
+\label{subsec:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\l$1$2$3)/g}}}
+
+$0
+endsnippet
+
+
+# Subsection Reference ######################################################### 
+snippet secref "Subsection Ref" i
+Section~\ref{subsec:$1}$0
+endsnippet
+
+
+# Subsubsection ################################################################
+snippet subsubsec "Subsubsection" b
+\subsubsec{${1:Subsubsection Title}}
+\label{subsubsec:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\l$1$2$3)/g}}}
+
+$0
+endsnippet
+
+
+# Paragraph ####################################################################
+snippet para "Paragraph" bi
+\paragraph{${1:Paragraph title}.}
+%
+$0
+endsnippet

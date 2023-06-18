@@ -1,0 +1,138 @@
+# Math zone detection ##########################################################
+global !p
+
+def math():
+	return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+
+endglobal
+
+
+# Definition ###################################################################
+snippet def "Definition" b
+\begin{definition}[$1] \label{def:$2}
+	${3:${VISUAL}}
+\end{definition}
+
+$0
+endsnippet
+
+
+# Definition Refernece #########################################################
+snippet defref "Reference to a definition" i
+Definition~\ref{def:$1}$0
+endsnippet
+
+
+# Lemma ########################################################################
+snippet lemma "Lemma" b
+\begin{lemma} \label{lemma:$1}
+	${2:${VISUAL}}
+\end{lemma}
+
+$0
+endsnippet
+
+
+# Lemma Reference ##############################################################
+snippet lemmaref "Reference to a lemma" i
+Lemma~\ref{lemma:$1}$0
+endsnippet
+
+
+# Proposition ##################################################################
+snippet prop "Proposition" b
+\begin{proposition} \label{proposition:$1}
+	${2:${VISUAL}}
+\end{proposition}
+
+$0
+endsnippet
+
+
+# Proposition Reference ########################################################
+snippet propref "Reference to a proposition" i
+Proposition~\ref{proposition:$1}$0
+endsnippet
+
+
+# Theorem ######################################################################
+snippet thm "Theorem" b
+\begin{theorem} \label{theorem:$1} 
+	${2:${VISUAL}}
+\end{theorem}
+
+$0
+endsnippet
+
+
+# Theorem Reference ############################################################
+snippet thmref "Reference to a theorem" i
+Theorem~\ref{theorem:$1}$0
+endsnippet
+
+
+# Theorem ######################################################################
+snippet corl "Corollary" b
+\begin{corollary} \label{corollary:$1}
+	${2:${VISUAL}}
+\end{corollary}
+
+$0
+endsnippet
+
+
+# Theorem Reference ############################################################
+snippet corlref "Reference to a corollary" i
+Corollary~\ref{corollary:$1}$0
+endsnippet
+
+
+# Proof ########################################################################
+snippet proof "Proof" b
+\begin{proof}
+	${1:${VISUAL}}
+\end{proof}
+endsnippet
+
+
+# Equation #####################################################################
+snippet eq "Equation" b
+\begin{equation} \label{equation:$1}
+	${2:${VISUAL}}
+\end{equation}
+endsnippet
+
+
+# Equation Reference ###########################################################
+snippet eqref "Reference to an equation" i
+Equation~\eqref{equation:$1}$0
+endsnippet
+
+
+# align ########################################################################
+snippet align "Align" b
+\begin{align*}
+	${1:${VISUAL}}
+\end{align*}
+endsnippet
+
+
+# frac #########################################################################
+context "math()"
+snippet frac "Fraction" i
+\frac{$1}{$2} $0
+endsnippet
+
+
+# ldots ########################################################################
+context "math()"
+snippet ... "ldots" i
+\ldots 
+endsnippet
+
+
+# implies ######################################################################
+context "math()"
+snippet => "implies" i
+\implies 
+endsnippet

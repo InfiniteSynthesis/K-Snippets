@@ -1,0 +1,51 @@
+# Begin ########################################################################
+snippet beg "begin{} / end{}" b
+\begin{$1}
+	${2:${VISUAL}}
+\end{$1}
+
+$0
+endsnippet
+
+
+# Center #######################################################################
+snippet cnt "Center" b
+\begin{center}
+	${2:${VISUAL}}
+\end{center}
+
+$0
+endsnippet
+
+
+# href #########################################################################
+snippet href "href command for url links, hyperref package required"
+\href{${1:url}}{${2:display name}}$0
+endsnippet
+
+
+# figure #######################################################################
+snippet fig "Figure environment" b
+\begin{figure}[${1:htpb}]
+	\centering
+	${2:\includegraphics[width=0.8\textwidth]{$3}}
+	\caption{${4:$3}}
+	\label{fig:${5:${3/\W+/-/g}}}
+\end{figure}
+endsnippet
+
+
+# Enumerate #################################################################### 
+snippet enum "Enumerate" bi
+\begin{enumerate}
+	\item $1
+\end{enumerate}
+endsnippet
+
+
+# Itemize ######################################################################
+snippet item "Itemize" bi
+\begin{itemize}
+	\item $1
+\end{itemize}
+endsnippet
