@@ -1,0 +1,67 @@
+# Conventional Commit Feature ##################################################
+snippet feat "Feature conventional commit"
+Feature: ${1:A new feature}
+
+${0:${VISUAL}}
+endsnippet
+
+# Conventional Commit Fix ######################################################
+snippet fix "Fix conventional commit"
+Fix: ${1:A bug fix}
+
+${0:${VISUAL}}
+endsnippet
+
+# Conventional Commit Refactor #################################################
+snippet refactor "Refactor conventional commit"
+Refactor: ${1:A code change that neither fixes a bug nor adds a feature}
+
+${0:${VISUAL}}
+endsnippet
+
+# Conventional Commit Test #####################################################
+snippet test "Test conventional commit"
+Test: ${1:Adding missing tests or correcting existing tests}
+
+${0:${VISUAL}}
+endsnippet
+
+# Conventional Commit Style#####################################################
+snippet style "Style conventional commit"
+Style: ${1:Changes that do not affect the meaning of the code}
+
+${0:${VISUAL}}
+endsnippet
+
+# Conventional Commit Build ####################################################
+snippet build "Build conventional commit"
+Build: ${1:Changes that affect the build system or external dependencies}
+
+${0:${VISUAL}}
+endsnippet
+
+# Conventional Commit Docs #####################################################
+snippet docs "Docs conventional commit"
+Docs: ${1:Documentation only changes}
+
+${0:${VISUAL}}
+endsnippet
+
+# Conventional Commit Chore ####################################################
+snippet chore "Chore conventional commit"
+Chore: ${1:Other changes that don't modify src or test files}
+
+${0:${VISUAL}}
+endsnippet
+
+# Conventional Commit Revert ###################################################
+snippet revert "Revert conventional commit"
+Revert: ${1:Reverts a previous commit}
+
+${0:${VISUAL}}
+endsnippet
+
+# Github Co-author Info ########################################################
+snippet coauthor "Co-author info" b
+Co-authored-by: ${1:NAME} <${2:NAME@EXAMPLE.COM}>$0
+endsnippet
